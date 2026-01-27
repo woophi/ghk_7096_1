@@ -1,4 +1,4 @@
-import { globalStyle, style } from '@vanilla-extract/css';
+import { style } from '@vanilla-extract/css';
 
 const bottomBtn = style({
   position: 'fixed',
@@ -21,25 +21,59 @@ const box = style({
   flexDirection: 'column',
   gap: '1rem',
   borderRadius: '1rem',
-  backgroundColor: '#F3F4F5',
+  border: '0.2px solid #FFFFFF',
+  backdropFilter: 'blur(4px)',
+  boxShadow: '4px 4px 7.2px 0px #FFFFFF40 inset',
+  background: '#F2F3F533',
 });
 
-const row = style({
+const box2 = style({
+  backgroundColor: '#FFFFFF33',
+  borderRadius: '12px',
+  paddingLeft: '1rem',
+  border: '0.2px solid #FFFFFF',
+  backdropFilter: 'blur(4px)',
+  boxShadow: '4px 4px 7.2px 0px #FFFFFF40 inset',
+});
+const box3 = style({
+  backgroundColor: '#FFFFFF33',
+  borderRadius: '8px',
+  padding: '12px',
+  border: '0.2px solid #FFFFFF',
+  backdropFilter: 'blur(4px)',
+  boxShadow: '4px 4px 7.2px 0px #FFFFFF40 inset',
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
+  flexDirection: 'column',
+  gap: '2px',
 });
 
-const switchItem = style({});
+const rowSb = style({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  gap: '8px',
+});
 
-globalStyle(`${switchItem} > span > span:first-child`, {
-  fontWeight: 500,
+const glass = style({
+  display: 'flex',
+  padding: '1rem 12px 28px',
+  flexDirection: 'column',
+  gap: '1rem',
+  borderRadius: '24px',
+  border: '0.2px solid #FFFFFF',
+  backdropFilter: 'blur(4px)',
+  boxShadow: '4px 4px 7.2px 0px #FFFFFF40 inset',
+  background: '#F2F3F533',
+  textAlign: 'center',
+  justifyContent: 'center',
 });
 
 export const appSt = {
   bottomBtn,
   container,
   box,
-  row,
-  switchItem,
+  box2,
+  box3,
+  rowSb,
+  glass,
 };
